@@ -127,6 +127,3 @@ class DefineProc(lineproc.LineProc):
                 return "//" + line
     
     def processEnd(self):
-        
-        if len(self.defStack) != 0:
-            raise lineproc.LineProcError("{}: unbalanced #if(n)def's and #endif's (EOF)".format(self.__class__.__name__))
